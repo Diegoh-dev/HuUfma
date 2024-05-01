@@ -13,7 +13,8 @@ export function LoginScreen() {
       <View
       
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
-        <Text style={{color:'blue'}} preset='paragraphSmall'>Olá Bem vindo de volta</Text>
+        <Text color='primary'   preset='headingLarge'>Olá </Text>
+        <Text color='primary'  preset='headingLarge'>Bem vindo de volta</Text>
       </View>
 
       <View style={{marginTop: 50, gap: 12}}>
@@ -40,6 +41,8 @@ export function LoginScreen() {
           placeholderTextColor={'#414396'}
         />
       </View>
+
+      <Text color='primary' preset='paragraphSmall'>Esqueci minha senha</Text>
 
       <Pressable
         style={{
