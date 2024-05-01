@@ -1,10 +1,15 @@
-import React from "react";
-import {Text as RNText} from 'react-native';
+import {createText} from '@shopify/restyle';
+import {Theme} from '@theme';
+import React, {ComponentProps, ReactNode} from 'react';
 
-export function Text(){
-    return(
-        <RNText>
-            
-        </RNText>
-    )
+const RNText = createText<Theme>();
+
+type TextProps = ComponentProps<typeof RNText>
+
+export interface Props extends TextProps  {
+  children: ReactNode;
+}
+
+export function Text({children,...RNTextProps}: Props) {
+  return <RNText {...RNTextProps}>{children}</RNText>;
 }

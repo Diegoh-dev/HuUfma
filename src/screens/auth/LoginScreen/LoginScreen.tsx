@@ -1,21 +1,19 @@
+/* eslint-disable react-native/no-inline-styles */
+import {Text} from '@components';
 import React from 'react';
 
-import {Pressable, Text, TextInput, View} from 'react-native';
+import {Pressable, TextInput, View} from 'react-native';
 
 export function LoginScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', padding: 16}}>
       {/* <SimpleLogo width={350}/> */}
-      <View style={{width: 200, height: 200, backgroundColor: '#ccc'}}></View>
+      <View style={{width: 200, height: 200, backgroundColor: '#ccc'}} />
 
       <View
+      
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
-        <Text style={{fontSize: 30, color: '#414396', fontWeight: 'bold'}}>
-          Olá
-        </Text>
-        <Text style={{fontSize: 30, color: '#414396', fontWeight: 'bold'}}>
-          Olá Bem vindo de volta
-        </Text>
+        <Text>Olá Bem vindo de volta</Text>
       </View>
 
       <View style={{marginTop: 50, gap: 12}}>
@@ -53,14 +51,7 @@ export function LoginScreen() {
           justifyContent: 'center',
           marginTop: 50,
         }}>
-        <Text
-          style={{
-            fontSize: 30,
-            color: '#fff',
-            fontWeight: 'bold',
-          }}>
-          Entrar
-        </Text>
+        <Text>Entrar</Text>
       </Pressable>
       <Pressable
         style={{
@@ -72,14 +63,7 @@ export function LoginScreen() {
           borderWidth: 1,
           marginTop: 10,
         }}>
-        <Text
-          style={{
-            fontSize: 30,
-            color: '#414396',
-            fontWeight: 'bold',
-          }}>
-          Criar uma conta
-        </Text>
+        <Text>Criar uma conta</Text>
       </Pressable>
     </View>
   );
