@@ -3,7 +3,18 @@ import {createTheme} from '@shopify/restyle';
 export const palette = {
   purplePrimary: '#414396',
   purplePrimaryLight: '#DEDEEB',
+
+  greenSuccess: '#4ABC86',
+  greenSuccessLight: '#D8FFEC',
+  redError: '#EA3838',
+  redErrorLight: '#FBECEC',
+  
   grayBlack: '#000000',
+  gray1: '#636363',
+  gray2: '#8E8E8E',
+  gray3: '#B3B3B3',
+  gray4: '#E1E1E1',
+  gray5: '#F5F5F5',
   grayWhite: '#FFFFFF',
 };
 
@@ -13,8 +24,17 @@ export const theme = createTheme({
     primary: palette.purplePrimary,
     primaryContrast: palette.grayWhite,
 
+    buttonPrimary: palette.purplePrimary,
+
     background: palette.grayWhite,
     backgroundContrast: palette.grayBlack,
+
+
+    error: palette.redError,
+    errorLight: palette.redErrorLight,
+
+    success: palette.greenSuccess,
+    successLight: palette.greenSuccessLight,
 
     //paleta de cores,
   },

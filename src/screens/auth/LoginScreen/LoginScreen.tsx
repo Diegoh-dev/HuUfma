@@ -1,23 +1,30 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Text} from '@components';
+import {Box, Text} from '@components';
 import React from 'react';
 
 import {Pressable, TextInput, View} from 'react-native';
+import { Button } from 'src/components/Button/Button';
 
 export function LoginScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', padding: 16}}>
       {/* <SimpleLogo width={350}/> */}
-      <View style={{width: 200, height: 200, backgroundColor: '#ccc'}} />
+      <Box 
+      width={200} height={200} backgroundColor='gray3'
+      // style={{width: 200, height: 200, backgroundColor: '#ccc'}}
+       />
 
-      <View
+      <Box
       
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
         <Text color='primary'   preset='headingLarge'>Olá </Text>
         <Text color='primary'  preset='headingLarge'>Bem vindo de volta</Text>
-      </View>
+      </Box>
 
-      <View style={{marginTop: 50, gap: 12}}>
+      <Box 
+      mt='s48'
+      gap='s12'
+      >
         <TextInput
           style={{
             width: 300,
@@ -40,9 +47,11 @@ export function LoginScreen() {
           placeholder="Cartão Sus"
           placeholderTextColor={'#414396'}
         />
-      </View>
+      </Box>
 
       <Text color='primary' preset='paragraphSmall'>Esqueci minha senha</Text>
+
+      <Button title='Entrar' />
 
       <Pressable
         style={{
