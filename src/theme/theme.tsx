@@ -38,3 +38,8 @@ export const theme = createTheme({
     s16: 16,
   },
 });
+
+
+export type Theme = typeof theme;
+
+export type ThemeColor = keyof Theme['colors'];
