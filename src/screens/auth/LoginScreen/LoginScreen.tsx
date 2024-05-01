@@ -13,7 +13,7 @@ export function LoginScreen() {
       <View
       
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
-        <Text>Olá Bem vindo de volta</Text>
+        <Text style={{color:'blue'}} preset='paragraphSmall'>Olá Bem vindo de volta</Text>
       </View>
 
       <View style={{marginTop: 50, gap: 12}}>
