@@ -1,9 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Box, Text} from '@components';
+import {Box, Button, Text} from '@components';
 import React from 'react';
 
 import {Pressable, TextInput, View} from 'react-native';
-import { Button } from 'src/components/Button/Button';
 
 export function LoginScreen() {
   return (
