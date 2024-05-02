@@ -60,9 +60,9 @@ export function LoginScreen() {
       </Text>
 
       <Box gap='s16'>
-        <Button title="Entrar" backgroundColor="primary" />
+        <Button  preset='primary' title="Entrar" />
 
-        <Button title="Criar uma conta" backgroundColor="gray4" />
+        <Button  preset='outline' title="Criar uma conta"  />
       </Box>
     </Box>
   );
