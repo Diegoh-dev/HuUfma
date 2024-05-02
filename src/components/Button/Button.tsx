@@ -24,6 +24,7 @@ export function Button({
   return (
     <TouchableOpacityBox
       height={50}
+      activeOpacity={.75}
       paddingHorizontal="s20"
       borderRadius="s16"
       alignItems="center"
