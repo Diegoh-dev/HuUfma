@@ -6,14 +6,19 @@ import {Pressable, TextInput, View} from 'react-native';
 
 export function LoginScreen() {
   return (
-    <Box flex={1} paddingHorizontal="s24">
+    <Box flex={1} paddingHorizontal="s24" mt='s16'>
       {/* <SimpleLogo width={350}/> */}
+
+      <Box alignItems='center'>
       <Box
-        width={200}
-        height={200}
+        width={150}
+        height={150}
         backgroundColor="gray3"
+        borderRadius='s16'
         // style={{width: 200, height: 200, backgroundColor: '#ccc'}}
       />
+
+      </Box>
 
       <Box
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
@@ -25,7 +30,7 @@ export function LoginScreen() {
         </Text>
       </Box>
 
-      <Box mt="s48" gap="s12">
+      {/* <Box mt="s48" gap="s12">
         <TextInput
           style={{
             width: 300,
@@ -48,15 +53,17 @@ export function LoginScreen() {
           placeholder="Cartão Sus"
           placeholderTextColor={'#414396'}
         />
-      </Box>
+      </Box> */}
 
       <Text color="primary" preset="paragraphSmall">
         Esqueci minha senha
       </Text>
 
-      <Button title="Entrar" backgroundColor="primary" />
+      <Box gap='s16'>
+        <Button title="Entrar" backgroundColor="primary" />
 
-      <Button title="Criar uma conta" backgroundColor="gray4" />
+        <Button title="Criar uma conta" backgroundColor="gray4" />
+      </Box>
     </Box>
   );
 }
