@@ -28,32 +28,35 @@ export function LoginScreen() {
         </Text>
       </Box>
 
-      <Box mt="s48" mb="s20">
-        <Text preset="paragraphSmall" color='gray2'>Prontuário</Text>
+      <Box mt="s48" mb="s40">
+        {/* <Text preset="paragraphSmall" color='primary'>Prontuário</Text> */}
         <TextInput
+        keyboardType='numeric'
           style={{
             height: 50,
             borderRadius: 16,
             padding: 12,
-            backgroundColor: '#DEDEEB',
+            backgroundColor: '#E1E1E1',
+            marginBottom:16,
           }}
-          // placeholder="Prontuário"
+          placeholder="Prontuário"
           placeholderTextColor={'#414396'}
         />
 
-        <Text preset="paragraphSmall" color='gray2'>Cartão Sus</Text>
+        {/* <Text preset="paragraphSmall" color='primary'>Cartão Sus</Text> */}
         <TextInput
+               keyboardType='numeric'
           style={{
             height: 50,
             borderRadius: 16,
             padding: 12,
-            backgroundColor: '#DEDEEB',
+            backgroundColor: '#E1E1E1',
           }}
-          // placeholder="Cartão Sus"
+          placeholder="Cartão Sus"
           placeholderTextColor={'#414396'}
         />
 
-        <Text color="primary" preset="paragraphSmall">
+        <Text color="primary" preset="paragraphSmall" mt='s4'>
           Esqueci minha senha
         </Text>
       </Box>
