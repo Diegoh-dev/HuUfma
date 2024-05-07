@@ -1,13 +1,17 @@
 import React from 'react';
-import {LoginScreen} from '@screens';
-import { ThemeProvider } from '@shopify/restyle';
-import { theme } from '@theme';
+import {LoginScreen, SignUpScreen} from '@screens';
+import {ThemeProvider} from '@shopify/restyle';
+import {theme} from '@theme';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
   return (
+    <SafeAreaProvider>
     <ThemeProvider theme={theme}>
-      <LoginScreen />
+      {/* <LoginScreen /> */}
+      <SignUpScreen />
     </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
 
