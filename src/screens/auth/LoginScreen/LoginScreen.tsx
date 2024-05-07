@@ -1,8 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Box, Button, Text} from '@components';
+import {Box, Button, Text, TextInput} from '@components';
 import React from 'react';
 
-import {Pressable, TextInput, View} from 'react-native';
+import {Pressable, View} from 'react-native';
 
 export function LoginScreen() {
   return (
@@ -30,7 +30,7 @@ export function LoginScreen() {
 
       <Box mt="s48" mb="s40">
         {/* <Text preset="paragraphSmall" color='primary'>Prontuário</Text> */}
-        <TextInput
+        {/* <TextInput
         keyboardType='numeric'
           style={{
             height: 50,
@@ -41,10 +41,20 @@ export function LoginScreen() {
           }}
           placeholder="Prontuário"
           placeholderTextColor={'#414396'}
+        /> */}
+        <TextInput
+          boxProps={{mb: 's20'}}
+          keyboardType="numeric"
+          placeholder="Prontuário"
+        />
+        <TextInput
+          boxProps={{mb: 's10'}}
+          keyboardType="numeric"
+          placeholder="Cartão Sus"
         />
 
         {/* <Text preset="paragraphSmall" color='primary'>Cartão Sus</Text> */}
-        <TextInput
+        {/* <TextInput
                keyboardType='numeric'
           style={{
             height: 50,
@@ -54,9 +64,9 @@ export function LoginScreen() {
           }}
           placeholder="Cartão Sus"
           placeholderTextColor={'#414396'}
-        />
+        /> */}
 
-        <Text color="primary" preset="paragraphSmall" mt='s4'>
+        <Text color="primary" preset="paragraphSmall">
           Esqueci minha senha
         </Text>
       </Box>
