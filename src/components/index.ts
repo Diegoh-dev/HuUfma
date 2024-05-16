@@ -4,3 +4,4 @@ export * from './Button/Button';
 export * from './ActivityIndicator/ActivityIndicator';
 export * from './TextInput/TextInput';
 export * from './Screen/Screen';
+export * from './Icon/icon';
