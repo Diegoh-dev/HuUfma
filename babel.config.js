@@ -12,6 +12,7 @@ module.exports = {
           '@brand': './src/brand',
           '@theme': './src/theme',
           '@hooks': './src/hooks',
+          '@routes': './src/routes',
         },
       },
     ],
