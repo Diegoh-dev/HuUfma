@@ -3,14 +3,20 @@ import React from 'react';
 
 export function SignUpScreen() {
   return (
-    <Screen flex={1}>
+    <Screen flex={1} canGoBack>
       <Text preset="headingLarge" color="primary" mb="s32">
         Criar uma conta
       </Text>
-      <Box>
+      <Box mb='s24'>
         <TextInput
           autoCapitalize="words"
-          placeholder="Nome completo"
+          placeholder="Nome"
+          boxProps={{mb: 's20'}}
+        />
+
+        <TextInput
+          autoCapitalize="words"
+          placeholder="Sobrenome"
           boxProps={{mb: 's20'}}
         />
         <TextInput

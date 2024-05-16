@@ -2,6 +2,7 @@ import React, {ReactNode} from 'react';
 import {Box, BoxProps} from '../Box/Box';
 import {ScrollViewContainer, ViewContainer} from './components/ScreenComponent';
 import {useAppSafeArea} from '@hooks';
+import { ScreenHeader } from './components/ScreenHeader';
 
 export interface ScreenProps extends BoxProps {
   children: ReactNode;
@@ -24,6 +25,7 @@ export function Screen({
       <Box
         paddingHorizontal="s24"
         style={[{paddingBottom: bottom, paddingTop: top}, style]}  {...BoxProps}>
+          <ScreenHeader canGoBack={canGoBack}/>
         {children}
       </Box>
     </Container>
