@@ -21,27 +21,14 @@ export function LoginScreen() {
       <Box
         style={{alignContent: 'center', alignItems: 'center', marginTop: 50}}>
         <Text color="primary" preset="headingLarge">
-          Olá{' '}
+          Hospital Universitário
         </Text>
-        <Text color="primary" preset="headingLarge">
-          Bem vindo de volta
+        <Text color="gray2" preset="paragraphLarge">
+          Universidade Federal do Maranhão
         </Text>
       </Box>
 
-      <Box mt="s48" mb="s40">
-        {/* <Text preset="paragraphSmall" color='primary'>Prontuário</Text> */}
-        {/* <TextInput
-        keyboardType='numeric'
-          style={{
-            height: 50,
-            borderRadius: 16,
-            padding: 12,
-            backgroundColor: '#E1E1E1',
-            marginBottom:16,
-          }}
-          placeholder="Prontuário"
-          placeholderTextColor={'#414396'}
-        /> */}
+      <Box mt="s48" mb="s24">
         <TextInput
           boxProps={{mb: 's20'}}
           keyboardType="numeric"
@@ -53,28 +40,15 @@ export function LoginScreen() {
           placeholder="Cartão Sus"
         />
 
-        {/* <Text preset="paragraphSmall" color='primary'>Cartão Sus</Text> */}
-        {/* <TextInput
-               keyboardType='numeric'
-          style={{
-            height: 50,
-            borderRadius: 16,
-            padding: 12,
-            backgroundColor: '#E1E1E1',
-          }}
-          placeholder="Cartão Sus"
-          placeholderTextColor={'#414396'}
-        /> */}
-
-        <Text color="primary" preset="paragraphSmall">
+        {/* <Text color="primary" preset="paragraphSmall">
           Esqueci minha senha
-        </Text>
+        </Text> */}
       </Box>
 
       <Box gap="s16">
         <Button preset="primary" title="Entrar" />
 
-        <Button preset="outline" title="Criar uma conta" />
+        {/* <Button preset="outline" title="Criar uma conta" /> */}
       </Box>
     </Box>
   );
