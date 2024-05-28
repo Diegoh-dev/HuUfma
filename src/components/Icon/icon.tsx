@@ -6,6 +6,8 @@ import { HomeIcon } from '../../assets/icons/HomeIcon';
 import { HomeFillIcon } from '../../assets/icons/HomeFillIcon';
 import { BellIcon } from '../../assets/icons/BellIcon';
 import { BellOnIcon } from '../../assets/icons/BellOnIcon';
+import { ProfileFillIcon } from '../../assets/icons/ProfileFillIcon';
+import { ProfileIcon } from '../../assets/icons/ProfileIcon';
 
 
 export interface IconBase {
@@ -44,6 +46,9 @@ const IconResgistry = {
   homeFill:HomeFillIcon,
   bellIcon: BellIcon,
   bellOnIcon: BellOnIcon,
+  profileFill:ProfileFillIcon,
+  profile:ProfileIcon,
+
 };
 
 export type IconTypes = typeof IconResgistry;

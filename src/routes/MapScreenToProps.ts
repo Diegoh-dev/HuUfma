@@ -35,8 +35,8 @@ export const mapScreenToProps: Record<
   ServicosScreen: {
     label: 'Meu perfil',
     icon: {
-      focused: 'arrowLeft',
-      unfocuses: 'arrowLeft',
+      focused: 'profileFill',
+      unfocuses: 'profile',
     },
   },
 };
