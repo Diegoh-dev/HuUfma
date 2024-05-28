@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Screen, Text} from '@components';
-import {AppScreenProps} from 'src/routes/types';
+import {AppScreenProps, AppTabScreenProps} from 'src/routes/types';
 
-export function ConsultasSreen({navigation}: AppScreenProps<'ConsultasSreen'>) {
+export function ConsultasSreen({navigation}: AppTabScreenProps<'ConsultasSreen'>) {
   return (
     <Screen>
       <Box>

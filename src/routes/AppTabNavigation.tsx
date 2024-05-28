@@ -1,19 +1,26 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {ConsultasSreen, HomeScreen} from '@screens';
 import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {ConsultasSreen, HomeScreen, InfoScreen, ServicosScreen} from '@screens';
 
-// export type RootStackTabNavigationParamList = {
-//   ConsultasSreen: undefined;
-//   HomeScreen: undefined;
-// };
+export type AppTabBottomTabParamlist = {
+  HomeScreen: undefined;
+  ConsultasSreen: undefined;
+  ServicosScreen: undefined;
+  infoScreen: undefined;
+};
 
-// const Tab = createBottomTabNavigator<RootStackTabNavigationParamList>();
+const Tab = createBottomTabNavigator<AppTabBottomTabParamlist>();
 
-// export function AppTabNavigation() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen name="HomeScreen" component={HomeScreen} />
-//       <Tab.Screen name="ConsultasSreen" component={ConsultasSreen} />
-//     </Tab.Navigator>
-//   );
-// }
+export function AppTabNavigation() {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      <Tab.Screen name="ConsultasSreen" component={ConsultasSreen} />
+      <Tab.Screen name="ServicosScreen" component={ServicosScreen} />
+      <Tab.Screen name="infoScreen" component={InfoScreen} />
+    </Tab.Navigator>
+  );
+}

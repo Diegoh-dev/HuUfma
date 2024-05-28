@@ -1,9 +1,11 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ConsultasSreen, HomeScreen} from '@screens';
+import {ConsultasSreen} from '@screens';
 import React from 'react';
+import { AppTabBottomTabParamlist, AppTabNavigation } from './AppTabNavigation';
+import { NavigatorScreenParams } from '@react-navigation/native';
 
 export type AppStackParamList = {
-  HomeScreen: undefined;
+  AppTabNavigation: NavigatorScreenParams<AppTabBottomTabParamlist>;
   ConsultasSreen: undefined;
 };
 
@@ -15,8 +17,9 @@ export function AppStack() {
       screenOptions={{
         headerShown: false,
         fullScreenGestureEnabled: true, // para aumentar a area arastavel dos dipositivos IOS
-      }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      }}
+      initialRouteName='AppTabNavigation'>
+      <Stack.Screen name="AppTabNavigation" component={AppTabNavigation} />
       <Stack.Screen name="ConsultasSreen" component={ConsultasSreen} />
     </Stack.Navigator>
   );
