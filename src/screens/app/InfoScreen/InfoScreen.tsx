@@ -7,7 +7,7 @@ export function InfoScreen({navigation}: AppTabScreenProps<'infoScreen'>) {
     <Screen>
       <Box>
         <Text>Olá, Diego</Text>
-        <Text>Nossos serviços</Text>
+        <Text>Nossas informações</Text>
       </Box>
     </Screen>
   );

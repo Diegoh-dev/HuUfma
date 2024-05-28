@@ -2,6 +2,8 @@ import {useAppTheme} from '@hooks';
 import {ThemeColor} from '@theme';
 import {Pressable} from 'react-native';
 import { ArrowLeftIcon } from '../../assets/icons/ArrowLeftIcon';
+import { HomeIcon } from '../../assets/icons/HomeIcon';
+import { HomeFillIcon } from '../../assets/icons/HomeFillIcon';
 
 
 export interface IconBase {
@@ -36,6 +38,8 @@ export function Icon({
 
 const IconResgistry = {
   arrowLeft: ArrowLeftIcon,
+  home:HomeIcon,
+  homeFill:HomeFillIcon,
 };
 
 export type IconTypes = typeof IconResgistry;

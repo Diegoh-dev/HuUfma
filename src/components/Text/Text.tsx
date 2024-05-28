@@ -5,10 +5,9 @@ import {TextStyle} from 'react-native';
 
 const RNText = createText<Theme>();
 
-type TextProps = ComponentProps<typeof RNText>;
+type RSTextProps = ComponentProps<typeof RNText>;
 
-export interface Props extends TextProps {
-  children: ReactNode;
+export interface TextProps extends RSTextProps {
   preset?: TextVariants;
   bold?: boolean;
   italic?: boolean;
@@ -23,7 +22,7 @@ export function Text({
   semiBold,
   style,
   ...RNTextProps
-}: Props) {
+}: TextProps) {
   const typeSizeFont = $fontSizes[preset];
 
   const fontFamily = getFontFamily(preset, bold, italic, semiBold);
