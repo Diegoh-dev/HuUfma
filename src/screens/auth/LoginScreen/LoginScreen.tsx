@@ -3,8 +3,9 @@ import {Box, Button, Text, TextInput} from '@components';
 import React from 'react';
 
 import {Pressable, View} from 'react-native';
+import { AuthScreenProps } from 'src/routes/types';
 
-export function LoginScreen() {
+export function LoginScreen({}:AuthScreenProps<'LoginScreen'>) {
   return (
     <Box flex={1} paddingHorizontal="s24" mt="s16">
       {/* <SimpleLogo width={350}/> */}

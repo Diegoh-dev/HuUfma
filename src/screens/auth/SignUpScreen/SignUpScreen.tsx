@@ -1,7 +1,8 @@
 import {Box, Button, Screen, Text, TextInput} from '@components';
 import React from 'react';
+import { AuthScreenProps } from 'src/routes/types';
 
-export function SignUpScreen() {
+export function SignUpScreen({}:AuthScreenProps<'SignUpScreen'>) {
   return (
     <Screen flex={1} canGoBack>
       <Text preset="headingLarge" color="primary" mb="s32">

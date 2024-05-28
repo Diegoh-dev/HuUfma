@@ -4,7 +4,7 @@ import React from 'react';
 
 export type AppStackParamList = {
   HomeScreen: undefined;
-  Consultas:undefined;
+  ConsultasSreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -17,7 +17,7 @@ export function AppStack() {
         fullScreenGestureEnabled: true, // para aumentar a area arastavel dos dipositivos IOS
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="Consultas" component={ConsultasSreen} />
+      <Stack.Screen name="ConsultasSreen" component={ConsultasSreen} />
     </Stack.Navigator>
   );
 }
