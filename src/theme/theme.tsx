@@ -3,6 +3,7 @@ import { ViewStyle } from 'react-native';
 
 export const palette = {
   purplePrimary: '#414396',
+  purpleSecondary: '#6061A7',
   purplePrimaryLight: '#DEDEEB',
 
   greenSuccess: '#4ABC86',

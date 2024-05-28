@@ -4,6 +4,8 @@ import {Pressable} from 'react-native';
 import { ArrowLeftIcon } from '../../assets/icons/ArrowLeftIcon';
 import { HomeIcon } from '../../assets/icons/HomeIcon';
 import { HomeFillIcon } from '../../assets/icons/HomeFillIcon';
+import { BellIcon } from '../../assets/icons/BellIcon';
+import { BellOnIcon } from '../../assets/icons/BellOnIcon';
 
 
 export interface IconBase {
@@ -40,6 +42,8 @@ const IconResgistry = {
   arrowLeft: ArrowLeftIcon,
   home:HomeIcon,
   homeFill:HomeFillIcon,
+  bellIcon: BellIcon,
+  bellOnIcon: BellOnIcon,
 };
 
 export type IconTypes = typeof IconResgistry;

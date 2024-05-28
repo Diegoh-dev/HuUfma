@@ -23,9 +23,12 @@ export function Screen({
   return (
     <Container>
       <Box
-        paddingHorizontal="s24"
+        // paddingHorizontal="s24"
         style={[{paddingBottom: bottom, paddingTop: top}, style]}  {...BoxProps}>
-          <ScreenHeader canGoBack={canGoBack}/>
+          {canGoBack && (
+            <ScreenHeader canGoBack={canGoBack}/>
+
+          )}
         {children}
       </Box>
     </Container>
