@@ -46,6 +46,23 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
           </Box>
         </Box>
       </Box>
+
+      <Box backgroundColor="grayWhite" padding='s12'>
+        <Box>
+          <Box flexDirection="row" gap='s8' alignItems='center'>
+            <Box
+              backgroundColor="gray4"
+              width={50}
+              height={50}
+              borderRadius="s16"></Box>
+
+            <Box>
+              <Text preset="paragraphSmall" color='purpleSecondary'>Hu-ufma</Text>
+              <Text preset="paragraphCaptionSmall" color='purpleSecondary'>Noticias</Text>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </Screen>
   );
 }
