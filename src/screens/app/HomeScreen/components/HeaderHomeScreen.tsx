@@ -28,7 +28,7 @@ export function HeaderHomeScreen() {
             borderRadius="s16"></Box>
 
           <Box>
-            <Text preset="paragraphMedium" color="grayWhite" bold>
+            <Text preset="paragraphLarge" color="grayWhite" bold>
               Olá, Diego
             </Text>
             <Text preset="paragraphSmall" color="grayWhite" bold>

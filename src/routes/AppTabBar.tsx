@@ -14,7 +14,6 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
     <Box style={[{paddingBottom: bottom}, $shadowProps]} {...$boxWrapper} flexDirection="row">
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
-        console.log(route.name);
 
         const tabIcon =
           mapScreenToProps[route.name as keyof AppTabBottomTabParamlist];
