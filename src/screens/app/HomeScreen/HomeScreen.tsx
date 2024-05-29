@@ -1,13 +1,16 @@
 import React from 'react';
-import {Box, Icon, Screen, Text} from '@components';
+import {Box, CardButton, Icon, Screen, Text} from '@components';
 import {AppScreenProps, AppTabScreenProps} from 'src/routes/types';
-import {StatusBar} from 'react-native';
+import {StatusBar, useWindowDimensions} from 'react-native';
 import {useAppTheme} from '@hooks';
 import {HeaderHomeScreen} from './components/HeaderHomeScreen';
 import {$shadowProps} from '@theme';
 
 export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
   const {colors} = useAppTheme();
+  const {height, width} = useWindowDimensions();
+  const CARD_WIDTH = width / 3.5;
+
   return (
     //to place safeArea for IOS
     <Screen style={{paddingHorizontal: 0, paddingTop: 0}}>
@@ -21,8 +24,8 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
         justifyContent="space-between"
         alignItems="center"
         mt="s8">
-        <Box
-          width={90}
+        {/* <Box
+          width={CARD_WIDTH}
           height={75}
           style={$shadowProps}
           backgroundColor="gray5"
@@ -31,40 +34,10 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
           justifyContent="center">
           <Icon name="bellIcon" color="primary" />
           <Text preset="paragraphSmall">Paciente</Text>
-        </Box>
-        <Box
-          width={90}
-          height={75}
-          style={$shadowProps}
-          backgroundColor="gray5"
-          borderRadius="s8"
-          alignItems="center"
-          justifyContent="center">
-          <Icon name="bellIcon" color="primary" />
-          <Text preset="paragraphSmall">Paciente</Text>
-        </Box>
-        <Box
-          width={90}
-          height={75}
-          style={$shadowProps}
-          backgroundColor="gray5"
-          borderRadius="s8"
-          alignItems="center"
-          justifyContent="center">
-          <Icon name="bellIcon" color="primary" />
-          <Text preset="paragraphSmall">Paciente</Text>
-        </Box>
-        <Box
-          width={90}
-          height={75}
-          style={$shadowProps}
-          backgroundColor="gray5"
-          borderRadius="s8"
-          alignItems="center"
-          justifyContent="center">
-          <Icon name="bellIcon" color="primary" />
-          <Text preset="paragraphSmall">Paciente</Text>
-        </Box>
+        </Box> */}
+        <CardButton content='Paciente' nameIcon='home' width={CARD_WIDTH}/>
+        <CardButton content='Paciente' nameIcon='profile' width={CARD_WIDTH}/>
+        <CardButton content='Paciente' nameIcon='arrowLeft' width={CARD_WIDTH}/>
       </Box>
 
       <Box padding="s12" borderRadius="s16">
