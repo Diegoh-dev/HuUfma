@@ -16,6 +16,7 @@ export function Screen({
   children,
   canGoBack = false,
   scrollable = false,
+  title,
   style,
   ...BoxProps
 }: ScreenProps) {
@@ -28,10 +29,10 @@ export function Screen({
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Container>
         <Box
-          // paddingHorizontal="s24"
+          paddingHorizontal="s24"
           style={[{paddingBottom: bottom, paddingTop: top}, style]}
           {...BoxProps}>
-          {canGoBack && <ScreenHeader canGoBack={canGoBack} />}
+          {canGoBack && <ScreenHeader canGoBack={canGoBack} title={title}/>}
           {children}
         </Box>
       </Container>
