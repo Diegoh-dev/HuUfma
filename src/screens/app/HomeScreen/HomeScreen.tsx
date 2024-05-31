@@ -48,7 +48,6 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
       </Box>
 
       <Box backgroundColor="grayWhite" padding='s12'>
-        <Box>
           <Box flexDirection="row" gap='s8' alignItems='center'>
             <Box
               backgroundColor="gray4"
@@ -61,7 +60,10 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
               <Text preset="paragraphCaptionSmall" color='purpleSecondary'>Noticias</Text>
             </Box>
           </Box>
-        </Box>
+
+          <Box backgroundColor='gray3' alignSelf='stretch' height={250} mt='s8' borderRadius='s16'>
+           
+          </Box>
       </Box>
     </Screen>
   );
