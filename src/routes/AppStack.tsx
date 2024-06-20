@@ -1,8 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ConsultasSreen} from '@screens';
 import React from 'react';
 import { AppTabBottomTabParamlist, AppTabNavigation } from './AppTabNavigation';
 import { NavigatorScreenParams } from '@react-navigation/native';
+// import { AgendaSreen } from 'src/screens/app/AgendaSreen/AgendaSreen';
 
 export type AppStackParamList = {
   AppTabNavigation: NavigatorScreenParams<AppTabBottomTabParamlist>;
@@ -20,7 +20,7 @@ export function AppStack() {
       }}
       initialRouteName='AppTabNavigation'>
       <Stack.Screen name="AppTabNavigation" component={AppTabNavigation} />
-      <Stack.Screen name="ConsultasSreen" component={ConsultasSreen} />
+      {/* <Stack.Screen name="ConsultasSreen" component={AgendaSreen} /> */}
     </Stack.Navigator>
   );
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import {BottomTabBarProps, createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {ConsultasSreen, HomeScreen, InfoScreen, ServicosScreen} from '@screens';
+import { AgendaSreen, HomeScreen, InfoScreen, ServicosScreen} from '@screens';
 import {Icon, Text} from '@components';
 import { AppTabBar } from './AppTabBar';
 
 export type AppTabBottomTabParamlist = {
   HomeScreen: undefined;
-  ConsultasSreen: undefined;
   ServicosScreen: undefined;
+  AgendaSreen: undefined;
   infoScreen: undefined;
 };
 
@@ -43,8 +43,8 @@ export function AppTabNavigation() {
         name="HomeScreen"
         component={HomeScreen}
       />
-      <Tab.Screen name="ConsultasSreen" component={ConsultasSreen} />
       <Tab.Screen name="ServicosScreen" component={ServicosScreen} />
+      <Tab.Screen name="AgendaSreen" component={AgendaSreen} />
       <Tab.Screen name="infoScreen" component={InfoScreen} />
     </Tab.Navigator>
   );

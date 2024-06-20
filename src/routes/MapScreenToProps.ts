@@ -18,22 +18,22 @@ export const mapScreenToProps: Record<
       unfocuses: 'home',
     },
   },
-  ConsultasSreen: {
-    label: 'Serviços',
+  AgendaSreen: {
+    label: 'Agenda',
     icon: {
       focused: 'home',
       unfocuses: 'home',
     },
   },
   infoScreen: {
-    label: 'Novidades',
+    label: 'Perfil',
     icon: {
-      focused: 'arrowLeft',
-      unfocuses: 'arrowLeft',
+      focused: 'profileFill',
+      unfocuses: 'profile',
     },
   },
   ServicosScreen: {
-    label: 'Meu perfil',
+    label: 'Serviço',
     icon: {
       focused: 'profileFill',
       unfocuses: 'profile',
