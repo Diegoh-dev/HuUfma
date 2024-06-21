@@ -28,7 +28,7 @@ export function ServicosScreen({
               padding="s20"
               gap="s10">
               <Box backgroundColor="primary" padding="s8" borderRadius="s8">
-                <Icon name="homeFill" color="grayWhite" size={25} />
+                <Icon name="calendar" color="grayWhite" size={30} />
               </Box>
               <Text preset="headingMedium" bold>
                 Consulta
@@ -55,7 +55,7 @@ export function ServicosScreen({
               padding="s20"
               gap="s10">
               <Box backgroundColor="primary" padding="s8" borderRadius="s8">
-                <Icon name="homeFill" color="grayWhite" size={25} />
+                <Icon name="science" color="grayWhite" size={30} />
               </Box>
               <Text preset="headingMedium" bold>
                 Exame
@@ -82,7 +82,7 @@ export function ServicosScreen({
               padding="s20"
               gap="s10">
               <Box backgroundColor="primary" padding="s8" borderRadius="s8">
-                <Icon name="homeFill" color="grayWhite" size={25} />
+                <Icon name="homeFill" color="grayWhite" size={30} />
               </Box>
               <Text preset="headingMedium" bold>
                 Outros

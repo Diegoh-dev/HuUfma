@@ -20,7 +20,7 @@ export function CardButton({content, nameIcon, width}: Props) {
       borderRadius="s8"
       alignItems="center"
       justifyContent="center">
-      <Icon name={nameIcon} color={'primary'} />
+      <Icon  name={nameIcon} size={30} color={'primary'} />
       <Text preset="paragraphSmall">{content}</Text>
     </Box>
   );

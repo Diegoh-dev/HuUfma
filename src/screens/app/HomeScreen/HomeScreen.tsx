@@ -16,7 +16,7 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
       {/* componentizar a status bar */}
       <HeaderHomeScreen />
 
-      <HeaderButtonsHomeScreen />
+        <HeaderButtonsHomeScreen />
 
       {/* componentizar */}
       <Box padding="s12" borderRadius="s16">
@@ -47,23 +47,30 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
         </Box>
       </Box>
 
-      <Box backgroundColor="grayWhite" padding='s12'>
-          <Box flexDirection="row" gap='s8' alignItems='center'>
-            <Box
-              backgroundColor="gray4"
-              width={50}
-              height={50}
-              borderRadius="s16"></Box>
+      <Box backgroundColor="grayWhite" padding="s12">
+        <Box flexDirection="row" gap="s8" alignItems="center">
+          <Box
+            backgroundColor="gray4"
+            width={50}
+            height={50}
+            borderRadius="s16"></Box>
 
-            <Box>
-              <Text preset="paragraphSmall" color='purpleSecondary'>Hu-ufma</Text>
-              <Text preset="paragraphCaptionSmall" color='purpleSecondary'>Noticias</Text>
-            </Box>
+          <Box>
+            <Text preset="paragraphSmall" color="purpleSecondary">
+              Hu-ufma
+            </Text>
+            <Text preset="paragraphCaptionSmall" color="purpleSecondary">
+              Noticias
+            </Text>
           </Box>
+        </Box>
 
-          <Box backgroundColor='gray3' alignSelf='stretch' height={250} mt='s8' borderRadius='s16'>
-           
-          </Box>
+        <Box
+          backgroundColor="gray3"
+          alignSelf="stretch"
+          height={250}
+          mt="s8"
+          borderRadius="s16"></Box>
       </Box>
     </Screen>
   );
