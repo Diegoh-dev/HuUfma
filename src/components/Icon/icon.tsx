@@ -8,6 +8,9 @@ import { BellIcon } from '../../assets/icons/BellIcon';
 import { BellOnIcon } from '../../assets/icons/BellOnIcon';
 import { ProfileFillIcon } from '../../assets/icons/ProfileFillIcon';
 import { ProfileIcon } from '../../assets/icons/ProfileIcon';
+import { AssignmentIcon } from '../../assets/icons/AssignmentIcon';
+import { ScienceIcon } from '../../assets/icons/Science';
+import { CalendarIcon } from '../../assets/icons/Calendar';
 
 
 export interface IconBase {
@@ -48,6 +51,9 @@ const IconResgistry = {
   bellOnIcon: BellOnIcon,
   profileFill:ProfileFillIcon,
   profile:ProfileIcon,
+  assignment:AssignmentIcon,
+  science:ScienceIcon,
+  calendar:CalendarIcon
 
 };
 
