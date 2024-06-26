@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Icon, IconPros, Screen, Text} from '@components';
 import {AppScreenProps, AppTabScreenProps} from 'src/routes/types';
 import {$shadowProps} from '@theme';
+import { HeaderHomeScreen } from '../HomeScreen/components/HeaderHomeScreen';
 
 interface listaServicosProps {
   tela:string;
@@ -45,6 +46,7 @@ export function ServicosScreen({
 
   return (
     <Screen>
+      {/* <HeaderHomeScreen/> */}
       <Text>Gerenciar meus serviços</Text>
       <Box mt="s24">
         {listaServicos.map((tela,index) => (

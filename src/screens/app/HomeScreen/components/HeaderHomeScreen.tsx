@@ -19,7 +19,8 @@ export function HeaderHomeScreen() {
         justifyContent="space-between"
         backgroundColor="primary"
         padding="s14"
-        height={100}>
+        borderBottomRightRadius='s40'
+        height={130}>
         <Box flexDirection="row" gap="s12" alignItems="center">
           <Box
             backgroundColor="grayWhite"

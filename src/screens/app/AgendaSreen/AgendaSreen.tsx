@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Icon, Screen, Text} from '@components';
+import {Box, Icon, Screen, Text, TextInput} from '@components';
 import {AppTabScreenProps} from 'src/routes/types';
 import { $shadowProps } from '@theme';
 
@@ -9,8 +9,28 @@ export function AgendaSreen({
   return (
     <Screen>
     <Box>
-      <Text>Olá, Diego</Text>
       <Text>Agenda</Text>
+
+      <TextInput
+          autoCapitalize="words"
+          placeholder="Nome"
+          boxProps={{mb: 's20'}}
+        />
+      <TextInput
+          autoCapitalize="words"
+          placeholder="Nome"
+          boxProps={{mb: 's20'}}
+        />
+      <TextInput
+          autoCapitalize="words"
+          placeholder="Tipo Agendamento"
+          boxProps={{mb: 's20'}}
+        />
+      <TextInput
+          autoCapitalize="words"
+          placeholder="Nome"
+          boxProps={{mb: 's20'}}
+        />
     </Box>
   </Screen>
   );
