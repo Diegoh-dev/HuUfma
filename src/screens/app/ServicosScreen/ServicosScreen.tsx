@@ -1,16 +1,54 @@
 import React from 'react';
-import {Box, Icon, Screen, Text} from '@components';
+import {Box, Icon, IconPros, Screen, Text} from '@components';
 import {AppScreenProps, AppTabScreenProps} from 'src/routes/types';
 import {$shadowProps} from '@theme';
 
+interface listaServicosProps {
+  tela:string;
+  Icon:IconPros['name']
+}
 export function ServicosScreen({
   navigation,
 }: AppTabScreenProps<'ServicosScreen'>) {
+
+  const listaServicos : listaServicosProps[] = [
+    {
+      tela:'Consulta',
+      Icon:'calendar',
+    },
+    {
+      tela:'Exame',
+      Icon:'science',
+    },
+    {
+      tela:'Vacinação',
+      Icon:'calendar',
+    },
+    {
+      tela:'Laboratório',
+      Icon:'science',
+    },
+    {
+      tela:'Telemedicina',
+      Icon:'homeFill',
+    },
+    {
+      tela:'Fisioterapia e Reabilitação',
+      Icon:'calendar',
+    },
+    // {
+    //   tela:'Cuidados Domiciliares',
+    //   Icon:'homeFill',
+    // },
+   
+  ]
+
   return (
     <Screen>
       <Text>Gerenciar meus serviços</Text>
       <Box mt="s24">
-        <Box borderRadius="s16" mt="s12">
+        {listaServicos.map((tela,index) => (
+        <Box borderRadius="s16" mt="s12" key={String(index)}>
           <Box flexDirection="row" borderRadius="s16" style={$shadowProps}>
             <Box
               width={7}
@@ -28,16 +66,18 @@ export function ServicosScreen({
               padding="s20"
               gap="s10">
               <Box backgroundColor="primary" padding="s8" borderRadius="s8">
-                <Icon name="calendar" color="grayWhite" size={30} />
+                <Icon name={tela.Icon} color="grayWhite" size={30} />
               </Box>
               <Text preset="headingMedium" bold>
-                Consulta
+                {tela.tela}
               </Text>
             </Box>
           </Box>
         </Box>
 
-        <Box borderRadius="s16" mt="s12">
+        ))}
+
+        {/* <Box borderRadius="s16" mt="s12">
           <Box flexDirection="row" borderRadius="s16" style={$shadowProps}>
             <Box
               width={7}
@@ -193,7 +233,7 @@ export function ServicosScreen({
               </Text>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Screen>
   );
