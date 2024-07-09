@@ -1,4 +1,4 @@
-import {Box, Icon, Text} from '@components';
+import {Box, Icon, Text, TextInput} from '@components';
 import {useAppTheme} from '@hooks';
 import React from 'react';
 import {StatusBar} from 'react-native';
@@ -13,34 +13,23 @@ export function HeaderHomeScreen() {
         showHideTransition={'fade'}
         networkActivityIndicatorVisible={true}
       />
-      <Box
-        flexDirection="row"
-        alignItems="center"
-        justifyContent="space-between"
-        backgroundColor="primary"
-        padding="s14"
-        borderBottomRightRadius='s40'
-        height={130}>
-        <Box flexDirection="row" gap="s12" alignItems="center">
-          <Box
-            backgroundColor="grayWhite"
-            width={50}
-            height={50}
-            borderRadius="s16"></Box>
 
+      <Box backgroundColor='primary' height={200} borderRadius='s40' padding='s20'>
+
+        <Box flexDirection='row' justifyContent='space-between' alignItems='center'>
           <Box>
-            <Text preset="paragraphLarge" color="grayWhite" bold>
-              Olá, Diego
-            </Text>
-            <Text preset="paragraphSmall" color="grayWhite" bold>
-              Prontuário: 14438232
-            </Text>
+            <Text preset='headingSmall' color='grayWhite'>Olá,</Text>
+            <Text preset='headingMedium' color='grayWhite'>Diego Costa</Text>
+          </Box>
+
+          <Box flexDirection='row' alignItems='center' gap='s12'>
+            <Icon name='bellIcon' color='grayWhite'/>
+           <Box width={50} height={50} backgroundColor='gray2' borderRadius='s16'>
+
+           </Box>
           </Box>
         </Box>
 
-        <Box marginLeft="s4">
-          <Icon name="bellIcon" color="grayWhite" />
-        </Box>
       </Box>
     </>
   );

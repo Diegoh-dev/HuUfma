@@ -16,12 +16,13 @@ export function CardButton({content, nameIcon, width}: Props) {
       width={width}
       height={75}
       style={$shadowProps}
-      backgroundColor="gray5"
-      borderRadius="s8"
+      backgroundColor="teste1"
+      borderRadius="s20"
       alignItems="center"
-      justifyContent="center">
-      <Icon  name={nameIcon} size={30} color={'primary'} />
-      <Text preset="paragraphSmall">{content}</Text>
+      justifyContent="center"
+      >
+      <Icon  name={nameIcon} size={30} color={'grayWhite'} />
+      {/* <Text preset="paragraphSmall">{content}</Text> */}
     </Box>
   );
 }

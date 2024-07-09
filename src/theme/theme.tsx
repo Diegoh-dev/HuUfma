@@ -18,7 +18,9 @@ export const palette = {
   gray4: '#E1E1E1',
   gray5: '#F5F5F5',
   grayWhite: '#FFFFFF',
-  teste:'#424242'
+  teste:'#424242',
+  colorButtons:'#9696BD',
+  teste1:'#8789C2',
   //#757575
 };
 
@@ -60,8 +62,11 @@ export const theme = createTheme({
     s8: 8,
     s12: 12,
     s16: 16,
+    s20: 20,
+    s24: 24,
     s32: 32,
     s40: 40,
+    s50: 50,
     s64: 64,
   },
   textVariants:{

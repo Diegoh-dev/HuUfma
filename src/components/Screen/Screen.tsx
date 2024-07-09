@@ -27,9 +27,9 @@ export function Screen({
     <KeyboardAvoidingView
       style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <Container>
+      <Container backgroundColor='#FFF'>
         <Box
-          paddingHorizontal="s24"
+          paddingHorizontal="s10"
           style={[{paddingBottom: bottom, paddingTop: top}, style]}
           {...BoxProps}>
           {canGoBack && <ScreenHeader canGoBack={canGoBack} title={title}/>}

@@ -11,6 +11,7 @@ import { ProfileIcon } from '../../assets/icons/ProfileIcon';
 import { AssignmentIcon } from '../../assets/icons/AssignmentIcon';
 import { ScienceIcon } from '../../assets/icons/Science';
 import { CalendarIcon } from '../../assets/icons/Calendar';
+import { DoctorIcon } from '../../assets/icons/doctorIcon';
 
 
 export interface IconBase {
@@ -53,7 +54,8 @@ const IconResgistry = {
   profile:ProfileIcon,
   assignment:AssignmentIcon,
   science:ScienceIcon,
-  calendar:CalendarIcon
+  calendar:CalendarIcon,
+  doctor:DoctorIcon,
 
 };
 

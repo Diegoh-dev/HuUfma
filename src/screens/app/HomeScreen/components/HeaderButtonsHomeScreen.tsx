@@ -4,12 +4,13 @@ import { useWindowDimensions } from "react-native";
 
 export function HeaderButtonsHomeScreen() {
     const {width} = useWindowDimensions();
-    const CARD_WIDTH = width / 3.5;
+    const CARD_WIDTH = width / 4.5;
     return (
       <>
-      <Text ml="s12" mt="s10" preset="headingMedium">Meus atalhos</Text>
+      <Text mt="s12" preset="headingMedium">Serviços</Text>
         <Box
-        padding="s12"
+        mt="s12"
+        // padding="s12"
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
@@ -18,6 +19,12 @@ export function HeaderButtonsHomeScreen() {
         <CardButton content="Exames" nameIcon="science" width={CARD_WIDTH} />
         <CardButton
           content="Consultas"
+          nameIcon="calendar"
+          width={CARD_WIDTH}
+        />
+   
+        <CardButton
+          content="Teste"
           nameIcon="calendar"
           width={CARD_WIDTH}
         />
