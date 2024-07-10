@@ -14,10 +14,17 @@ import {useAppTheme} from '@hooks';
 import {HeaderHomeScreen} from './components/HeaderHomeScreen';
 import {$shadowProps} from '@theme';
 import {HeaderButtonsHomeScreen} from './components/HeaderButtonsHomeScreen';
+import {CardAgendamentos} from './components/CardAgendamentos';
 
 interface PropsCarrossel {
   title: string;
   descricao: string;
+}
+interface PropsConsultas {
+  data: string;
+  profissional: string;
+  especialidade: string;
+  id: string;
 }
 
 export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
@@ -40,17 +47,40 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
     },
   ];
 
+  const listaProximasConsultas = [
+    {
+      data: '12/08/2024 09:30',
+      profissional: 'Dr. João',
+      especialidade: 'Psiquiatra',
+      id: '001',
+    },
+    {
+      data: '12/08/2024 09:30',
+      profissional: 'Dr. Paulo',
+      especialidade: 'Cardiologista',
+      id: '002',
+    },
+    {
+      data: '12/08/2024 09:30',
+      profissional: 'Dr. Pedro',
+      especialidade: 'Oftalmologista',
+      id: '003',
+    },
+  ];
+
   const widthCard = Dimensions.get('screen').width - 20;
   function renderItem(data: ListRenderItemInfo<PropsCarrossel>) {
     return (
       <Box
-      backgroundColor='grayWhite'
+        backgroundColor="grayWhite"
         // padding="s10"
         borderRadius="s16"
         width={widthCard}>
-        <Box flexDirection="row" borderRadius="s16"
-        //  style={$shadowProps}
-         >
+        <Box
+          flexDirection="row"
+          borderRadius="s16"
+          //  style={$shadowProps}
+        >
           <Box
             flex={1}
             width={100}
@@ -75,6 +105,55 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
               {data.item.descricao}
             </Text>
           </Box>
+        </Box>
+      </Box>
+    );
+  }
+
+  function renderItemProximasConsultas({
+    item,
+  }: ListRenderItemInfo<PropsConsultas>) {
+    const diaMes = item.data?.split('/')[0];
+    return (
+      <Box
+        flexDirection="row"
+        flex={1}
+        backgroundColor="teste1"
+        width={widthCard}
+        paddingHorizontal="s16"
+        padding="s14"
+        borderRadius="s24">
+        <Box
+          height={120}
+          width={80}
+          alignItems="center"
+          justifyContent="center"
+          paddingHorizontal="s14"
+          padding="s12"
+          backgroundColor="primary"
+          borderRadius="s20">
+          <Text bold preset="headingLarge" color="grayWhite">
+            {diaMes}
+          </Text>
+          <Text preset="headingMedium" color="grayWhite">
+            Ter
+          </Text>
+        </Box>
+
+        <Box
+          padding="s12"
+          ml="s10"
+          alignItems="flex-start"
+          justifyContent="center">
+          <Text color="colorText" preset="headingMedium">
+            {item.data?.split(' ')[1]} AM
+          </Text>
+          <Text fontWeight="700" bold preset="headingLarge" color="grayWhite">
+            {item.profissional}
+          </Text>
+          <Text color="colorText" preset="headingMedium">
+            {item.especialidade}
+          </Text>
         </Box>
       </Box>
     );
@@ -136,7 +215,7 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
         <HeaderButtonsHomeScreen />
       </Box>
 
-      <Box mt='s16'>
+      <Box mt="s16">
         <FlatList
           ref={FlatlistRef}
           horizontal
@@ -147,21 +226,20 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
           viewabilityConfigCallbackPairs={
             viewabilityConfigCallbackPairs.current
           }
-          ItemSeparatorComponent={() => <View style={{marginRight:12}}></View>}
+          ItemSeparatorComponent={() => <View style={{marginRight: 12}}></View>}
         />
 
         <FlatList
           data={listDadosCarrossel}
           renderItem={({item, index}) => (
             <Box
-            ml='s10'
+              ml="s10"
               width={activeBanner === index ? 15 : 8}
               height={8}
               borderRadius="s8"
               backgroundColor={
                 activeBanner === index ? 'purplePrimary' : 'gray3'
               }
-              // marginHorizontal='s4'
             />
           )}
           style={{
@@ -175,6 +253,8 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
           keyExtractor={(item, index) => String(index)}
         />
       </Box>
+
+      <CardAgendamentos />
     </Screen>
   );
 }

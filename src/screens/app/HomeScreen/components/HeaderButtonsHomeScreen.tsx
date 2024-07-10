@@ -7,9 +7,8 @@ export function HeaderButtonsHomeScreen() {
     const CARD_WIDTH = width / 4.5;
     return (
       <>
-      <Text mt="s12" preset="headingMedium">Serviços</Text>
+      <Text fontWeight='bold' color='teste' mt="s16" mb="s16" preset="headingMedium">Serviços</Text>
         <Box
-        mt="s12"
         // padding="s12"
         flexDirection="row"
         justifyContent="space-between"
