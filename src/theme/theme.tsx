@@ -22,6 +22,10 @@ export const palette = {
   colorButtons:'#9696BD',
   teste1:'#8789C2',
   colorText:'#DBDDE4',
+  teste2:'#B6B8D8',
+  teste3:'#9799CD',
+  teste4:'#D1C4E9',
+  teste5:'#E6E6FA',
   //#757575
 };
 

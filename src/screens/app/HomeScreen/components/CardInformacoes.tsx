@@ -1,12 +1,18 @@
-import { Box, Text } from '@components';
-import React, { useEffect, useRef, useState } from 'react';
-import { Dimensions, FlatList, ListRenderItemInfo, View, ViewToken } from 'react-native';
+import {Box, Icon, Text} from '@components';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  Dimensions,
+  FlatList,
+  ListRenderItemInfo,
+  View,
+  ViewToken,
+} from 'react-native';
 
 interface PropsCarrossel {
-    title: string;
-    descricao: string;
-       id:string;
-  }
+  title: string;
+  descricao: string;
+  id: string;
+}
 export function CardInformacoes() {
   const FlatlistRef = useRef<FlatList>(null);
   const widthCard = Dimensions.get('screen').width - 20;
@@ -15,28 +21,26 @@ export function CardInformacoes() {
     {
       title: 'Coronavírus',
       descricao: 'Principais informações sobre o Coronavírus.',
-      id:'1'
+      id: '1',
     },
     {
       title: 'Câncer de mama',
       descricao: 'sintomas,tratamento,causas e prevenção.',
-         id:'2'
+      id: '2',
     },
     {
       title: 'Imunização',
       descricao: 'Importância da vacinação.',
-         id:'3'
+      id: '3',
     },
   ];
 
-  function renderItem({
-    item,
-  }: ListRenderItemInfo<PropsCarrossel>) {
+  function renderItem({item}: ListRenderItemInfo<PropsCarrossel>) {
     return (
       <Box
         flexDirection="row"
         flex={1}
-        backgroundColor="teste1"
+        backgroundColor="teste4"
         width={widthCard}
         paddingHorizontal="s16"
         padding="s14"
@@ -47,31 +51,48 @@ export function CardInformacoes() {
           alignItems="center"
           justifyContent="center"
           paddingHorizontal="s14"
-          padding="s12"
-          backgroundColor="primary"
+          padding="s8"
+          backgroundColor="teste2"
           borderRadius="s20">
-          <Text bold preset="headingLarge" color="grayWhite">
-         oi
-          </Text>
-          <Text preset="headingMedium" color="grayWhite">
-            Ter
-          </Text>
+          <Icon name='science' color='grayWhite' size={30}/>
         </Box>
 
         <Box
-          padding="s12"
-          ml="s10"
-          alignItems="flex-start"
-          justifyContent="center">
-          <Text color="colorText" preset="headingMedium">
-             AM
+          padding="s8"
+          flex={1}
+          // ml="s10"
+          // alignItems="flex-start"
+          // justifyContent="center"
+          >
+          <Text 
+          fontWeight="700" color="primary" preset="headingMedium">
+            Aedes Aegypti
           </Text>
-          <Text fontWeight="700" bold preset="headingLarge" color="grayWhite">
-            profissional
+
+          <Box
+            padding="s4"
+            paddingHorizontal="s8"
+            backgroundColor="primary"
+            borderRadius="s16"
+            width={60}
+            >
+            <Text color="colorText" preset="paragraphCaption">
+              Dengue
+            </Text>
+          </Box>
+
+         <Box flexDirection='row'>
+         <Text
+            style={{
+              flex: 1,
+              flexWrap: 'wrap',
+            }}
+            preset="paragraphSmall"
+            color="primary">
+            Combate ao aedes aegypti: Prevenção e controle da dangue,
+            chikungunya e zika
           </Text>
-          <Text color="colorText" preset="headingMedium">
-       especialidade
-          </Text>
+         </Box>
         </Box>
       </Box>
     );
@@ -121,12 +142,8 @@ export function CardInformacoes() {
     return () => clearTimeout(timeClear);
   }, [activeBanner]);
 
-
   return (
-    <Box mt='s16'>
-      {/* <Text mb="s16" fontWeight="bold" color="teste" preset="headingMedium">
-        Agendamentos
-      </Text> */}
+    <Box mt="s16">
       <FlatList
         ref={FlatlistRef}
         horizontal
@@ -146,9 +163,7 @@ export function CardInformacoes() {
             width={activeBanner === index ? 15 : 8}
             height={8}
             borderRadius="s8"
-            backgroundColor={
-                activeBanner === index ? 'purplePrimary' : 'gray3'
-            }
+            backgroundColor={activeBanner === index ? 'purplePrimary' : 'gray3'}
           />
         )}
         style={{

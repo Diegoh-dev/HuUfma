@@ -14,14 +14,14 @@ export function CardButton({content, nameIcon, width}: Props) {
   return (
     <Box
       width={width}
-      height={75}
+      height={80}
       style={$shadowProps}
-      backgroundColor="teste1"
+      backgroundColor="teste5"
       borderRadius="s20"
       alignItems="center"
       justifyContent="center"
       >
-      <Icon  name={nameIcon} size={30} color={'grayWhite'} />
+      <Icon  name={nameIcon} size={30} color={'primary'} />
       {/* <Text preset="paragraphSmall">{content}</Text> */}
     </Box>
   );
