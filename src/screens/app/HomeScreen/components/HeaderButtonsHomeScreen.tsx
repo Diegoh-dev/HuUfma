@@ -13,7 +13,7 @@ export function HeaderButtonsHomeScreen() {
      </Box> */}
       <Text
         fontWeight="bold"
-        color="teste"
+        color="primary"
         mt="s16"
         mb="s16"
         preset="headingMedium">
@@ -24,7 +24,8 @@ export function HeaderButtonsHomeScreen() {
         flexDirection="row"
         justifyContent="space-around"
         gap='s10'
-        alignItems="center">
+        alignItems="center"
+        >
         <CardButton
           content="Histórico Médico"
           nameIcon="assignment"

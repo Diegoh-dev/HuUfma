@@ -12,6 +12,7 @@ import { AssignmentIcon } from '../../assets/icons/AssignmentIcon';
 import { ScienceIcon } from '../../assets/icons/Science';
 import { CalendarIcon } from '../../assets/icons/Calendar';
 import { DoctorIcon } from '../../assets/icons/doctorIcon';
+import { SearchIcon } from '../../assets/icons/SearchIcon';
 
 
 export interface IconBase {
@@ -56,6 +57,7 @@ const IconResgistry = {
   science:ScienceIcon,
   calendar:CalendarIcon,
   doctor:DoctorIcon,
+  search:SearchIcon,
 
 };
 

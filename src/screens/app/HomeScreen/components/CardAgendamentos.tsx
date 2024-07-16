@@ -133,7 +133,7 @@ export function CardAgendamentos() {
 
   return (
     <Box>
-      <Text mb="s16" fontWeight="bold" color="teste" preset="headingMedium">
+      <Text mb="s16" fontWeight="bold" color="primary" preset="headingMedium">
         Agendamentos
       </Text>
       <FlatList

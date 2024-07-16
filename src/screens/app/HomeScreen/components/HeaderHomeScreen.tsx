@@ -14,7 +14,7 @@ export function HeaderHomeScreen() {
         networkActivityIndicatorVisible={true}
       />
 
-      <Box backgroundColor='primary' height={200} borderRadius='s40' padding='s20'>
+      <Box backgroundColor='primary' height={200} borderRadius='s40' padding='s20' flexDirection='column' justifyContent='space-between'>
 
         <Box flexDirection='row' justifyContent='space-between' alignItems='center'>
           <Box>
@@ -28,6 +28,10 @@ export function HeaderHomeScreen() {
 
            </Box>
           </Box>
+        </Box>
+
+        <Box>
+          <TextInput placeholder='Pesquisar médico' placeholderTextColor={colors.gray3} LeftComponent={<Icon name='search' color='primary'/>}/>
         </Box>
 
       </Box>

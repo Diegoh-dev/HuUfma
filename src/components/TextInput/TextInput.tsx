@@ -1,5 +1,5 @@
 import {useAppTheme} from '@hooks';
-import React, {useRef} from 'react';
+import React, {ReactElement, useRef} from 'react';
 import {
   Pressable,
   TextInput as RNTextInput,
@@ -9,19 +9,21 @@ import {Box, BoxProps} from '../Box/Box';
 
 interface TextInputProps extends RNTextInputProps {
   boxProps?: BoxProps;
+  LeftComponent?:ReactElement;
 }
 
-export function TextInput({boxProps, ...RNTextInputProps}: TextInputProps) {
+export function TextInput({boxProps,LeftComponent, ...RNTextInputProps}: TextInputProps) {
   const inputRef = useRef<RNTextInput>(null);
 
   const {colors} = useAppTheme();
 
   const $textInputContainer: BoxProps = {
     flexDirection: 'row',
-    borderWidth: 2,
+    borderWidth: 1,
     // borderWidth: errorMessage ? 2 : 1,
     padding: 's8',
-    borderColor: 'gray4',
+    borderColor: 'grayWhite',
+    backgroundColor:'grayWhite',
     // borderColor: errorMessage ? 'error' : 'gray4',
     borderRadius: 's16',
   };
@@ -34,9 +36,16 @@ export function TextInput({boxProps, ...RNTextInputProps}: TextInputProps) {
     <Box {...boxProps}>
       <Pressable onPress={focusInput}>
         <Box {...$textInputContainer}>
+
+          {LeftComponent && (
+            <Box ml='s12' mr="s12" justifyContent="center">
+              {LeftComponent}
+            </Box>
+          )}
+
           <RNTextInput
-            {...RNTextInputProps}
             placeholderTextColor={colors.primary}
+            {...RNTextInputProps}
           />
         </Box>
       </Pressable>

@@ -15,7 +15,7 @@ interface PropsCarrossel {
 }
 export function CardInformacoes() {
   const FlatlistRef = useRef<FlatList>(null);
-  const widthCard = Dimensions.get('screen').width - 20;
+  const widthCard = Dimensions.get('screen').width - 50;
 
   const listDadosCarrossel = [
     {
@@ -40,11 +40,22 @@ export function CardInformacoes() {
       <Box
         flexDirection="row"
         flex={1}
-        backgroundColor="teste4"
+        mb='s16'
+        // backgroundColor="teste4"
+        backgroundColor='grayWhite'
         width={widthCard}
         paddingHorizontal="s16"
         padding="s14"
-        borderRadius="s24">
+        borderRadius="s24"
+        shadowColor='grayBlack'
+        shadowOffset={{
+          width:0,
+          height:3,
+        }}
+        shadowOpacity={0.17}
+        shadowRadius={3.05}
+        elevation={4}
+        >
         <Box
           height={120}
           width={80}
@@ -149,10 +160,11 @@ export function CardInformacoes() {
         horizontal
         data={listDadosCarrossel}
         renderItem={renderItem}
+        // style={{display:'flex', gap:5}}
         keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
-        ItemSeparatorComponent={() => <View style={{marginRight: 12}}></View>}
+        ItemSeparatorComponent={() => <View style={{marginLeft: 3,marginRight:3}}></View>}
       />
 
       <FlatList
