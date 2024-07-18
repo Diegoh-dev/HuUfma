@@ -14,7 +14,7 @@ export function HeaderButtonsHomeScreen() {
       <Text
         fontWeight="bold"
         color="primary"
-        mt="s16"
+        mt="s10"
         mb="s16"
         preset="headingMedium">
         Serviços

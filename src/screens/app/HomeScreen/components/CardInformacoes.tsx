@@ -40,7 +40,7 @@ export function CardInformacoes() {
       <Box
         flexDirection="row"
         flex={1}
-        mb='s16'
+        mb='s10'
         // backgroundColor="teste4"
         backgroundColor='grayWhite'
         width={widthCard}

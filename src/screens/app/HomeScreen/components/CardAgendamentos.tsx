@@ -16,7 +16,9 @@ interface PropsConsultas {
 }
 
 export function CardAgendamentos() {
-  const widthCard = Dimensions.get('screen').width - 20;
+  // const widthCard = Dimensions.get('screen').width - 20;
+  const widthCard = Dimensions.get('screen').width - 50;
+
   const [activeBannerAgendamentos, setActiverBannerAgendamentos] = useState(0);
 
   const FlatlistRef = useRef<FlatList>(null);
@@ -49,12 +51,23 @@ export function CardAgendamentos() {
     return (
       <Box
         flexDirection="row"
+        mb='s10'
         flex={1}
-        backgroundColor="teste1"
+        // backgroundColor="teste1"
+        backgroundColor='grayWhite'
         width={widthCard}
         paddingHorizontal="s16"
         padding="s14"
-        borderRadius="s24">
+        borderRadius="s24"
+        shadowColor='grayBlack'
+        shadowOffset={{
+          width:0,
+          height:3,
+        }}
+        shadowOpacity={0.17}
+        shadowRadius={3.05}
+        elevation={4}
+        >
         <Box
           height={120}
           width={80}
@@ -77,13 +90,13 @@ export function CardAgendamentos() {
           ml="s10"
           alignItems="flex-start"
           justifyContent="center">
-          <Text color="colorText" preset="headingMedium">
+          <Text color="primary" preset="headingMedium">
             {item.data?.split(' ')[1]} AM
           </Text>
-          <Text fontWeight="700" bold preset="headingLarge" color="grayWhite">
+          <Text fontWeight="700" bold preset="headingLarge" color="primary">
             {item.profissional}
           </Text>
-          <Text color="colorText" preset="headingMedium">
+          <Text color="primary" preset="headingMedium">
             {item.especialidade}
           </Text>
         </Box>
@@ -144,7 +157,8 @@ export function CardAgendamentos() {
         keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
-        ItemSeparatorComponent={() => <View style={{marginRight: 12}}></View>}
+        // ItemSeparatorComponent={() => <View style={{marginRight: 12}}></View>}
+        ItemSeparatorComponent={() => <View style={{marginLeft: 3,marginRight:3}}></View>}
       />
 
       <FlatList
