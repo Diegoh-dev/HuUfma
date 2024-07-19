@@ -11,6 +11,7 @@ import {
 interface PropsCarrossel {
   title: string;
   descricao: string;
+  tema: string;
   id: string;
 }
 export function CardInformacoes() {
@@ -19,18 +20,21 @@ export function CardInformacoes() {
 
   const listDadosCarrossel = [
     {
-      title: 'Coronavírus',
-      descricao: 'Principais informações sobre o Coronavírus.',
+      title: 'Aedes Aegypti',
+      descricao: 'Combate ao aedes aegypti: Prevenção e controle da dangue...',
+      tema:'Dengue',
       id: '1',
     },
     {
       title: 'Câncer de mama',
       descricao: 'sintomas,tratamento,causas e prevenção.',
+      tema:'Câncer',
       id: '2',
     },
     {
       title: 'Imunização',
       descricao: 'Importância da vacinação.',
+      tema:'Vacina',
       id: '3',
     },
   ];
@@ -77,10 +81,12 @@ export function CardInformacoes() {
           >
           <Text 
           fontWeight="700" color="primary" preset="headingMedium">
-            Aedes Aegypti
+            {item.tema}
           </Text>
 
           <Box
+          mt='s4'
+          mb='s4'
             padding="s4"
             paddingHorizontal="s8"
             backgroundColor="primary"
@@ -88,7 +94,7 @@ export function CardInformacoes() {
             width={60}
             >
             <Text color="colorText" preset="paragraphCaption">
-              Dengue
+              {item.tema}
             </Text>
           </Box>
 
@@ -100,8 +106,7 @@ export function CardInformacoes() {
             }}
             preset="paragraphSmall"
             color="primary">
-            Combate ao aedes aegypti: Prevenção e controle da dangue,
-            chikungunya e zika
+            {item.descricao}
           </Text>
          </Box>
         </Box>
