@@ -28,17 +28,17 @@ export function HeaderButtonsHomeScreen() {
         >
         <CardButton
           content="Histórico"
-          nameIcon="assignment"
+          nameIcon="historico"
           width={CARD_WIDTH}
         />
         <CardButton content="Exames" nameIcon="science" width={CARD_WIDTH} />
         <CardButton
           content="Agendas"
-          nameIcon="calendar"
+          nameIcon="agenda"
           width={CARD_WIDTH}
         />
 
-        <CardButton content="Especiali..." nameIcon="calendar" width={CARD_WIDTH} />
+        <CardButton content="Especiali..." nameIcon="doctor" width={CARD_WIDTH} />
       </Box>
     </>
   );

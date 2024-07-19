@@ -11,8 +11,10 @@ import { ProfileIcon } from '../../assets/icons/ProfileIcon';
 import { AssignmentIcon } from '../../assets/icons/AssignmentIcon';
 import { ScienceIcon } from '../../assets/icons/Science';
 import { CalendarIcon } from '../../assets/icons/Calendar';
-import { DoctorIcon } from '../../assets/icons/doctorIcon';
+import { DoctorIcon } from '../../assets/icons/DoctorIcon';
 import { SearchIcon } from '../../assets/icons/SearchIcon';
+import { AgendaIcon } from '../../assets/icons/AgendaIcon';
+import { HistoricoIcon } from '../../assets/icons/HistoricoIcon';
 
 
 export interface IconBase {
@@ -58,6 +60,8 @@ const IconResgistry = {
   calendar:CalendarIcon,
   doctor:DoctorIcon,
   search:SearchIcon,
+  agenda:AgendaIcon,
+  historico:HistoricoIcon,
 
 };
 
