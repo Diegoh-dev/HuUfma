@@ -11,7 +11,7 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
   const {bottom} = useAppSafeArea();
 
   return (
-    <Box style={[{paddingBottom: bottom}, $shadowProps]} {...$boxWrapper} flexDirection="row">
+    <Box style={[{paddingBottom: bottom,paddingHorizontal:10}, $shadowProps]} {...$boxWrapper} flexDirection="row">
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
 
@@ -51,15 +51,18 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
             testID={options.tabBarTestID}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={{flex: 1}}>
+            // style={{flex: 1}}
+            style={{flex: !isFocused ? 1 : undefined, width: isFocused ? 80 : 'auto'}}
+            backgroundColor={isFocused ? 'primary' : 'grayWhite'}
+            borderRadius={isFocused ? 's20' : undefined}>
             <Icon
               name={isFocused ? tabIcon.icon.focused : tabIcon.icon.unfocuses}
-              color={isFocused ? 'primary' : 'backgroundContrast'}
+              color={isFocused ? 'background' : 'primary'}
             />
             <Text
-                {...$label}
+              {...$label}
               preset="paragraphCaption"
-              style={{color: isFocused ? '#673ab7' : '#222'}}>
+              style={{color: isFocused ? '#fff' : '#673ab7'}}>
               {tabIcon.label}
             </Text>
           </TouchableOpacityBox>
