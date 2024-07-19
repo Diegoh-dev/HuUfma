@@ -38,7 +38,7 @@ export function HeaderButtonsHomeScreen() {
           width={CARD_WIDTH}
         />
 
-        <CardButton content="Teste" nameIcon="calendar" width={CARD_WIDTH} />
+        <CardButton content="Especiali..." nameIcon="calendar" width={CARD_WIDTH} />
       </Box>
     </>
   );
