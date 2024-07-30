@@ -21,8 +21,8 @@ export const mapScreenToProps: Record<
   AgendaSreen: {
     label: 'Agenda',
     icon: {
-      focused: 'homeFill',
-      unfocuses: 'home',
+      focused: 'agenda',
+      unfocuses: 'agenda',
     },
   },
   infoScreen: {

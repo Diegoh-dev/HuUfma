@@ -52,7 +52,7 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
             onPress={onPress}
             onLongPress={onLongPress}
             // style={{flex: 1}}
-            style={{flex: !isFocused ? 1 : undefined, width: isFocused ? 80 : 'auto'}}
+            style={{flex: !isFocused ? 1 : undefined, width: isFocused ? 80 : 'auto',paddingTop:4,paddingBottom:4}}
             backgroundColor={isFocused ? 'primary' : 'grayWhite'}
             borderRadius={isFocused ? 's20' : undefined}>
             <Icon
