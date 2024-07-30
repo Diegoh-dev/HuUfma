@@ -14,7 +14,7 @@ export function HeaderHomeScreen() {
         networkActivityIndicatorVisible={true}
       />
 
-      <Box backgroundColor='primary' height={200} borderRadius='s40' padding='s20' flexDirection='column' justifyContent='space-between'>
+      <Box backgroundColor='primary' height={200} borderRadius='s32' padding='s20' flexDirection='column' justifyContent='space-between'>
 
         <Box flexDirection='row' justifyContent='space-between' alignItems='center'>
           <Box>

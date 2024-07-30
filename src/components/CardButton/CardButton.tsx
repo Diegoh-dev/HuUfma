@@ -18,7 +18,7 @@ export function CardButton({content, nameIcon, width}: Props) {
       height={60}
       // style={$shadowProps}
       backgroundColor="grayWhite"
-      borderRadius="s20"
+      borderRadius="s16"
       alignItems="center"
       justifyContent="center"
       shadowColor='grayBlack'

@@ -68,7 +68,7 @@ export function CardInformacoes() {
           paddingHorizontal="s14"
           padding="s8"
           backgroundColor="teste2"
-          borderRadius="s20">
+          borderRadius="s16">
           <Icon name='science' color='grayWhite' size={30}/>
         </Box>
 

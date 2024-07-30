@@ -76,7 +76,7 @@ export function CardAgendamentos() {
           paddingHorizontal="s14"
           padding="s12"
           backgroundColor="primary"
-          borderRadius="s20">
+          borderRadius="s16">
           <Text bold preset="headingLarge" color="grayWhite">
             {diaMes}
           </Text>
