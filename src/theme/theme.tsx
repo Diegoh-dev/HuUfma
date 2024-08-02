@@ -18,6 +18,7 @@ export const palette = {
   gray4: '#E1E1E1',
   gray5: '#F5F5F5',
   grayWhite: '#FFFFFF',
+
   teste:'#424242',
   colorButtons:'#9696BD',
   teste1:'#8789C2',
@@ -26,6 +27,9 @@ export const palette = {
   teste3:'#9799CD',
   teste4:'#D1C4E9',
   teste5:'#E6E6FA',
+  border:'#CFCDCD',
+  nome:'#222E54',
+  nomeMedico:'#263257'
   //#757575
 };
 
