@@ -157,7 +157,7 @@ export function AgendaSreen({navigation}: AppTabScreenProps<'AgendaSreen'>) {
         {/* </Box> */}
 
         <Box
-          ml="s16"
+          ml="s20"
           alignItems="flex-start"
           justifyContent="center">
       

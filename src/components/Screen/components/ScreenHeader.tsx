@@ -10,7 +10,10 @@ const ICON_SIZE = 20;
 export function ScreenHeader({canGoBack, title}: Props) {
   const navigation = useNavigation();
   // const navigation = useNavigation();
-
+    if(!title && !canGoBack){
+      return null;
+    }
+    
   return (
     <Box flexDirection="row" justifyContent="space-between" mb="s24">
       {canGoBack && (
