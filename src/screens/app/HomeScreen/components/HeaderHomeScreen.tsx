@@ -1,7 +1,7 @@
 import {Box, Icon, Text, TextInput} from '@components';
 import {useAppTheme} from '@hooks';
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {Image, StatusBar} from 'react-native';
 
 export function HeaderHomeScreen() {
   const {colors} = useAppTheme();
@@ -24,8 +24,12 @@ export function HeaderHomeScreen() {
 
           <Box flexDirection='row' alignItems='center' gap='s12'>
             <Icon name='bellIcon' color='grayWhite'/>
-           <Box width={50} height={50} backgroundColor='gray2' borderRadius='s16'>
-
+           <Box width={50} height={50} borderRadius='s16'>
+           <Image
+             style={{width:50,height:50,borderRadius:16}} 
+            // width={60}
+            // height={60}
+             source={require('src/brand/medico.png')}/>
            </Box>
           </Box>
         </Box>
